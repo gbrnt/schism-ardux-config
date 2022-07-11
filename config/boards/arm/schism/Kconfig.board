@@ -1,0 +1,9 @@
+# Schism board configuration
+
+config BOARD_SCHISM_LEFT
+    bool "schism_left"
+    depends on SOC_NRF52840_QIAA
+
+config BOARD_SCHISM_RIGHT
+    bool "schism_right"
+    depends on SOC_NRF52840_QIAA

@@ -1,0 +1,33 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+// Enable ARDUX Left
+#define ARDUX_LEFT 1
+
+// SW14 SW15 SW16 SW17
+// SW26 SW27 SW28 SW29
+
+// ARTS Row
+#define KEY_A 17
+#define KEY_R 16
+#define KEY_T 15
+#define KEY_S 14
+// EYIO Row
+#define KEY_E 29
+#define KEY_Y 28
+#define KEY_I 27
+#define KEY_O 26
+
+// Define Offsets
+#define LEADING_NONES NONE(0,0,1)
+#define MIDDLE_NONES NONE(0, 0, 2)
+#define TRAILING_NONES NONE(0, 1, 0)
+
+// Thumb buttons (used for BT combos)
+//#define THUMB_1 18
+//#define THUMB_2 19
+//#define THUMB_3 20
+
+// Include main ardux.io keymap
+#include "../../../ardux.dtsi"

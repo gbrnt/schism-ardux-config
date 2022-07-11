@@ -1,0 +1,38 @@
+// schism_left.dts
+
+// Include common parts
+#include "schism.dtsi"
+
+/{
+  kscan0: kscan {
+    compatible = "zmk,kscan-gpio-matrix";
+    label = "KSCAN";
+    debounce-period = <10>;
+
+    diode-direction = "col2row";
+
+    row-gpios
+      = <&gpio0 3 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN)>
+      , <&gpio1 15 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN)>
+      , <&gpio1 13 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN)>
+      , <&gpio1 10 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN)>
+      , <&gpio1 11 (GPIO_OPEN_SOURCE | GPIO_PULL_DOWN)>
+      ;
+
+    col-gpios
+      = <&gpio0 10 (GPIO_OPEN_SOURCE)>
+      , <&gpio0 9 (GPIO_OPEN_SOURCE)>
+      , <&gpio1 6 (GPIO_OPEN_SOURCE)>
+      , <&gpio1 4 (GPIO_OPEN_SOURCE)>
+      , <&gpio1 2 (GPIO_OPEN_SOURCE)>
+      , <&gpio1 1 (GPIO_OPEN_SOURCE)>
+
+      , <&gpio0 2 (GPIO_OPEN_SOURCE)>
+			, <&gpio0 28 (GPIO_OPEN_SOURCE)>
+			, <&gpio0 29 (GPIO_OPEN_SOURCE)>
+			, <&gpio0 30 (GPIO_OPEN_SOURCE)>
+			, <&gpio0 31 (GPIO_OPEN_SOURCE)>
+			, <&gpio0 4 (GPIO_OPEN_SOURCE)>
+      ;
+  };
+};
